@@ -3,8 +3,7 @@
 
 body {
   background-image: url('./background.jpg');
-  background-position: center;
-  background-size: repeat;
+  color: hsl(0, 0%, 15%)
 }
 
 
@@ -37,6 +36,20 @@ nav{
   flex-direction: row;
   user-select: none;
   cursor: pointer;
+}
+
+.noise{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./noise.png');
+  background-size: repeat;
+  opacity: 0.075;
+  pointer-events: none;
+
+  z-index: 1;
 }
 
 #wrapper{
@@ -78,11 +91,13 @@ nav{
 }
 
 .nav_link{
+  position: relative;
   text-decoration: none;
   font-family: "Special Elite";
   color: white;
   font-size: 1.75rem;
   padding: 10px;
+  padding-inline: 50px;
   cursor: pointer;
 }
 
