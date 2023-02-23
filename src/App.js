@@ -104,7 +104,7 @@ function App() {
       array_index = array_index + 1;
       if(array_index === letters[text_select].length){ //stop when finished printing and center text
         clearInterval(timerVar);   
-        wrapperRef.current.style.transition = "0.33s ease-in"; ;
+        wrapperRef.current.style.transition = "0.33s ease-in";
         let offset = titleRef.current.offsetWidth/2;
         wrapperRef.current.style.width = "calc(50vw + " + String(offset) + "px)";
     }
