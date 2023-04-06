@@ -1,0 +1,28 @@
+.main{
+    margin-bottom: 10%;
+    font-family: "Special Elite";
+}
+
+.main_title{
+    font-size:  4rem;
+    max-width: 25%;
+    text-align: left;
+    margin-left: 17.5%;
+}
+
+.socials{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.main_img_container{
+    display: flex;
+    margin: 8px;
+    align-items: center;
+}
+
+.main_img_container img{
+    max-width: 36px;
+    margin-right: 8px;
+}

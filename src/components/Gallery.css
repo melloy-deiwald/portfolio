@@ -141,3 +141,18 @@
     pointer-events: none;
     display: block;
 }
+
+@media all and (min-width:256px) and (max-width: 1024px) {
+    .image_frame{
+        width: 90vw;
+        cursor: default;
+    }
+
+    .popup{
+        display: none;
+    }
+
+    .grey_out{
+        display: none;
+    }
+  }

@@ -1,4 +1,84 @@
-canvas{
-    width: 50vw;
-    height: 50vh;
+:root{
+    --dark: rgb(102, 12, 12);
+}
+
+.abt{
+    display: flex;
+    justify-content: center;
+    color: var(--dark);
+}
+
+.about_text{
+    font-size: 1.5rem;
+    text-align: left;
+    border: solid rgb(61, 61, 61) 1.5px;
+    filter: sepia(.75);
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: "Rubik";
+    font-weight: 400;
+}
+
+.about_text *{
+    margin-block: 6px;
+}
+
+.about_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_header_title{
+    font-family: "EB Garamond";
+    font-size: 2.25rem;
+}
+
+.steamship{
+    display: flex;
+}
+
+
+
+.typewritten{
+    font-family: "Special Elite";
+    font-size: 1.4rem;
+}
+
+.handwritten{
+    font-family: "Dancing Script";
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+.du{
+    flex: 1 0 auto;
+    border-bottom: 2px dotted var(--dark);
+    margin-bottom: 0;
+}
+
+.flex{
+    display: flex;
+    margin-block: 14px;
+}
+
+.align-v{
+    align-items: center;
+}
+
+.separator{
+    content: "";
+    width: 100%;
+    border-bottom: 2.5px solid rgb(163, 17, 17);
+    margin-block: 8px;
+    border-radius: 4px;
+}
+
+.wsl_logo{
+    display: flex;
+    justify-content: center;
+}
+
+.wsl_logo img{
+    width: 128px;
 }

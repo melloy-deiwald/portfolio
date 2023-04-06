@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
 
 body {
   background-image: url('./background.jpg');
-  color: hsl(0, 0%, 15%)
+  color: hsl(0, 0%, 15%);
 }
 
 
@@ -38,12 +42,16 @@ nav{
   cursor: pointer;
 }
 
+#parent{
+  transition: 0.66s ease-in-out;
+}
+
 .noise{
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url('./noise.png');
   background-size: repeat;
   opacity: 0.075;
@@ -97,7 +105,7 @@ nav{
   color: white;
   font-size: 1.75rem;
   padding: 10px;
-  padding-inline: 50px;
+  padding-inline: 35px;
   cursor: pointer;
 }
 
@@ -130,4 +138,34 @@ nav{
   font-size: 3rem;
   font-family: 'EB Garamond', serif;
   margin-bottom: 10vh;
+}
+
+@media all and (min-width:256px) and (max-width: 1024px) {
+  .title{
+    font-size: 32px;
+  }
+}
+
+
+.link_button{
+  border-bottom: dotted 2px black;
+  text-align: left;
+  margin-left: 17.5%;
+  width: max-content;
+  margin-top: 16px;
+  font-size: 1.5rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.link_button:hover{
+  color: rgb(163, 8, 8);
+  border-bottom: dotted 2px rgb(163, 8, 8);
+}
+
+.scroll_up{
+  position: fixed;
+  bottom: 36px;
+  right: 64px;
+  cursor: pointer
 }
