@@ -3,6 +3,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import Gallery from './components/Gallery.jsx'
 import About from './components/About.jsx'
 import Projects from './components/Projects.jsx'
+import Printing from './components/Printing.jsx'
+import Programming from './components/Programming.jsx'
+import Other from './components/Other.jsx'
 import Main from './components/Main.jsx'
 import up from './icons/up.png'
 
@@ -18,32 +21,39 @@ function App() {
     "\"Creations\"",
     "Other"
 ]);
-  let [title, setTitle] = useState([]);
-  let [array_index, setIndex] = useState(0);
-  let [text_select, setText_select] = useState(0);
-  let [opacity, setOpacity] = useState(1);
-  let [show_scroll, setShowScrollButton] = useState(false);
-  let wrapperRef = useRef(null);
-  let titleRef = useRef(null);
-  let windowRef = useRef(null);
+let [title, setTitle] = useState([]);
+let [array_index, setIndex] = useState(0);
+let [text_select, setText_select] = useState(0);
+let [opacity, setOpacity] = useState(1);
+let [show_scroll, setShowScrollButton] = useState(false);
+let wrapperRef = useRef(null);
+let titleRef = useRef(null);
+let windowRef = useRef(null);
+
 
   const handle_projects_selector = (project) => {
     show_new_text(project);
-    console.log(project, "index");
   }
 
-  let [content, setContent] = useState(<Main to_projects={handle_projects_selector}/>);
+  const [content, setContent] = useState(<Main to_projects={handle_projects_selector}/>);
   let [select_i, setSelect] = useState(0);
-
-  const contents = [<Main to_projects={handle_projects_selector}/>, <About />, <Main/>, <Projects select_project={handle_projects_selector}/>, <Gallery/>];
-
   let [timer, setTimer] = useState();
+  
+  const contents = [
+    <Main to_projects={handle_projects_selector}/>, 
+    <About/>, 
+    <Main/>, 
+    <Projects select_project={handle_projects_selector}/>, 
+    <Gallery/>, 
+    <Printing/>,
+    <Programming/>,
+    <Other/>
+  ];
+
 
   useEffect(() => {
-    // This function will run when the component mounts
-    windowRef.current = window;
-    if(window.innerWidth < 1024) { text_select = 2; setText_select(text_select) }
-    clear_letters();
+    show_new_text(0);
+
     function handleScroll() {
       if (window.scrollY > 0) {
         setShowScrollButton(true);
@@ -156,15 +166,31 @@ function App() {
     }, 125);
     setTimer(timerVar);
   }
+    /*
+    const timerVar = setInterval(() => {
+      if(array_index < letters[text_select].length){
+        title = [...title, (<div dangerouslySetInnerHTML={{__html: letters[text_select][array_index]}} />)];
+        setTitle(title);
+      }
+      array_index = array_index + 1;
+      if(array_index === letters[text_select].length){ //stop when finished printing and center text
+        clearInterval(timerVar);   
+        wrapperRef.current.style.transition = "0.33s ease-in";
+        let offset = titleRef.current.offsetWidth/2;
+        wrapperRef.current.style.width = "calc(50vw + " + String(offset) + "px)";
+    }
+    }, 125);
+    setTimer(timerVar);*/
 
-  function transition_parent() {
-    setOpacity(0);
-    window.scrollTo(0,0);
-    const timeout = setTimeout(() => {
-      setContent(contents[select_i]);
-      setOpacity(1);
-    }, 666); 
+    function transition_parent() {
+      setOpacity(0);
+      window.scrollTo(0,0);
+      const timeout = setTimeout(() => {
+        setContent(contents[select_i]);
+        setOpacity(1);
+      }, 666); 
+    }
   }
-}
+
 
 export default App;

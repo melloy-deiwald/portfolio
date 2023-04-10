@@ -1,6 +1,8 @@
 import './About.css'
 import React, {useEffect, useRef, useState} from 'react';
+import { ReactSVG } from 'react-svg';
 import white_star_line from '../icons/white_star_line.png'
+import glyph from '../icons/light_glyph.png'
 
 function About() {
   // Declare state variables and useState hooks here
@@ -58,10 +60,16 @@ function About() {
           also back end but enjoys the design aspect of front end development. 
         </div> <div className='flex du typewritten'>
           Ana e-girl support in Overwatch. As a friend of Blahaj, Lucy is also trans!
+        </div> <div className='flex du typewritten'>
+          Favourite TV-Show: The Owl House &nbsp;
+          <img style={{ width: "28px" }} src={glyph} alt='Glyph'/>
         </div>
         
         <div className='separator' />
-        <div className='wsl_logo' ><img src={white_star_line} alt="WSL Logo" /></div>
+        <div className='wsl_logo' >
+          <img src={white_star_line} alt="WSL Logo" />
+        </div>
+
 
       </div>
     </div>

@@ -1,0 +1,90 @@
+.phl-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+
+.phl-inner-container{
+    width: 33%;
+    background: rgb(26, 26, 26);
+    padding: 12px;
+}
+
+.phl-title{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.phl-sliders{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    box-sizing: border-box;
+    padding-inline: 48px;
+    gap: 36px;
+}
+
+.phl-slider-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.phl-image{
+    width: 90%;
+    margin-left: 5%;
+    position: relative;
+}
+
+.phl-image img{
+    width: 100%;
+}
+
+.phl-button{
+    position: absolute;
+    bottom: 24px;
+    left: calc(50% - 32px);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.phl-button-inner{
+    position: absolute;
+    bottom: 31px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid transparent;
+    padding: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.1s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.phl-button-inner:hover{
+    background: rgb(220, 220, 220);
+}
+
+.phl-slider-desc{
+    color: white;
+    user-select: none;
+    cursor: default;
+}

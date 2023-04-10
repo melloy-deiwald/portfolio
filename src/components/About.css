@@ -60,6 +60,7 @@
 .flex{
     display: flex;
     margin-block: 14px;
+    align-items: center;
 }
 
 .align-v{

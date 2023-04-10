@@ -1,0 +1,126 @@
+:root{
+    --pl-border: 1px solid black;
+}
+
+.pl-wrapper{
+    width: 100%;
+    padding: 24px;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.pl-container{
+    display: flex;
+    flex-direction: column;
+    font-family: "Source Code Pro";
+    box-sizing: border-box;
+    gap: 24px;
+    background: rgb(31, 31, 31);
+    width: 1024px;
+    padding: 24px;
+}
+
+.pc-container{
+    display: flex;
+    flex-direction: column;
+    background: rgb(216, 216, 195);
+    border-radius: 24px;
+    margin-bottom: 12px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.pl-title{
+    width: 100%;
+    text-align: center;
+    border: var(--pl-border);
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.pc-main{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.pl-punchcard{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(80, 1fr);
+    border: var(--pl-border);
+    border-top: none;
+    box-sizing: border-box;
+}
+
+.punchcard-cell {
+    font-size: 14px;
+    height: 20px;
+    margin: 1px;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.1s;
+
+  }
+  
+  .punchcard-cell.active {
+    background-color: rgb(26, 26, 26);
+    color: rgb(26, 26, 26);
+    border-radius: 2px;
+  }
+
+.pcellnumber{
+    font-size: 7px;
+    margin: 0;
+    cursor: default;
+    border-top: 1px dashed black ;
+}
+
+.pl-text-container{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 12px;
+    background: rgb(40, 40, 109);
+}
+
+.pl-description-title{
+    background: rgb(196, 196, 196);
+    text-align: center;
+    padding: 4px;
+}
+
+.pl-description{
+    width: 100%;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
+    background: rgb(26, 26, 26);
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.pl-link{
+    cursor: pointer;
+    background: rgb(43, 90, 43);
+    color: rgb(230, 230, 230);
+    width: max-content;
+    font-size: 2rem;
+    padding: 16px;
+    border-radius: 2px;
+    margin-left: 8px;
+    user-select: none;
+}
+
+.pl-link:active{
+    color: white;
+}
+
+.flex-center{
+    justify-content: center;
+}
