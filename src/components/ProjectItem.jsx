@@ -13,7 +13,6 @@ function ProjectItem ( props ) {
 
             );
         }
-        console.log(content);
         return <div className='additional_images_container'>{content}</div>;
     }
 

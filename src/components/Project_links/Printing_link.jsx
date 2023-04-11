@@ -39,14 +39,12 @@ function Printing_link ({ link, link_index }) {
     }
 
     const draw_text = () => {
-        console.log("Drawing_text");
         const animated_text = "PRINTING";
         let index = 0;
         let text_animate_timer = setInterval(() => {
             animate_elements.push(<text className="stroke-animation" x={String(34+(index*4))+"%"}y="50%" fill="#00000000">{animated_text[index]}</text>)
             setAnimateElements([...animate_elements]);
             index+=1;
-            console.log(animate_elements);
             if(index >= animated_text.length){clearInterval(text_animate_timer); addBorderHover()}
         }, 150)
     }

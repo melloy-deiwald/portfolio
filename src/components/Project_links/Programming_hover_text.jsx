@@ -25,7 +25,6 @@ function Programming_hover_text( {text_value, click_handler , link_index} ) {
             }
             if(iteration == original_text.length-1){word = original_text}
             setCompileText(word);
-            console.log(compile_text);
             iteration += 1;
             if (iteration >= original_text.length){clearInterval(scramble_interval)}
         }, 100);

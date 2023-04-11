@@ -31,7 +31,6 @@ function Gallery() {
     )
 
     const show_popup = (image, image_info) => {
-      console.log("hello");
       popup_data = {
         "link": image,
         "name": image_info.name,
@@ -41,7 +40,6 @@ function Gallery() {
         "exposure": image_info.exposure,
         "description": image_info.description
       }
-      console.log("hello", window.innerWidth);
       setPopupData(popup_data);
       if (window.innerWidth > 1024){
         popupRef.current.style.top = "2.5vh";

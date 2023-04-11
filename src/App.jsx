@@ -83,9 +83,9 @@ let windowRef = useRef(null);
   }
 
   const move = (y) => {
-    let height = windowRef.current.innerHeight;
+    let height = window.innerHeight;
     y = height * (y*0.01);
-    windowRef.current.scrollTo(0, y);
+    window.scrollTo(0, y);
 }
 
   return (
