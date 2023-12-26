@@ -2,7 +2,7 @@ import './Main.css'
 
 import discord from '../icons/discord.png'
 import steam from '../icons/steam.png'
-import battlenet from '../icons/battlenet.png'
+import riot from '../icons/riot.png'
 
 function Main( { to_projects } ) {
   return (
@@ -15,15 +15,15 @@ function Main( { to_projects } ) {
       <div className='socials'>
         <div className='main_img_container'>
           <img src={discord} alt="discord" />
-          Melloy #1854
+          melloy_
         </div>
         <div className='main_img_container'>
           <img src={steam} alt="steam" />
           lucy_melloy (id)
         </div>
         <div className='main_img_container'>
-          <img src={battlenet} alt="steam" />
-          Melloy #21300
+          <img src={riot} alt="riot" />
+          Lucy #16523
         </div>
       </div>
 

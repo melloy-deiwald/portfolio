@@ -61,27 +61,51 @@ function Gallery() {
       greyRef.current.style.cursor = "default";
     }
 
-    function generateImages(){
-        if(images.length === 0){        
-            for(let x = 0; x < imagesImport.length; x++){
-                images = images.concat((
-                  <div onClick={() => show_popup(imagesImport[x], imageData[x])} className='image_frame'>
-                    <img className='image' src={imagesImport[x]} alt={imageData[x].name} />
-                    <div className='image_information'>
-                      <div className='filler'></div>
-                      <div className='text image_name'><p>{imageData[x].name}</p></div>
-                      <div className='shot_info_container'>
-                        <div className='text'><img alt='' src={Aperture}/><p>{imageData[x].aperture}</p></div>
-                        <div className='text'><img alt='' src={Focal_Length}/><p>{imageData[x].focal_length}</p></div>
-                        <div className='text'><img alt='' src={ISO}/><p>{imageData[x].iso}</p></div>
-                        <div className='text'><img alt='' src={Exposure}/><p>{imageData[x].exposure}</p></div></div>
-                    </div>
+    function generateImages() {
+      if (images.length === 0) {
+        // Combine image and metadata information into an array
+        const combinedData = imagesImport.map((image, index) => ({
+          image,
+          metadata: imageData[index],
+          creationDate: new Date(imageData[index].creation_date),
+        }));
+    
+        // Sort the combinedData array based on creation date in descending order
+        combinedData.sort((a, b) => b.creationDate - a.creationDate);
+    
+        // Update the state with the sorted images
+        setImages(
+          combinedData.map((item) => (
+            <div onClick={() => show_popup(item.image, item.metadata)} className="image_frame">
+              <img className="image" src={item.image} alt={item.metadata.name} />
+              <div className="image_information">
+                <div className="filler"></div>
+                <div className="text image_name">
+                  <p>{item.metadata.name}</p>
+                </div>
+                <div className="shot_info_container">
+                  <div className="text">
+                    <img alt="" src={Aperture} />
+                    <p>{item.metadata.aperture}</p>
                   </div>
-                
-                ));
-            }
-            setImages(images);
-        }
+                  <div className="text">
+                    <img alt="" src={Focal_Length} />
+                    <p>{item.metadata.focal_length}</p>
+                  </div>
+                  <div className="text">
+                    <img alt="" src={ISO} />
+                    <p>{item.metadata.iso}</p>
+                  </div>
+                  <div className="text">
+                    <img alt="" src={Exposure} />
+                    <p>{item.metadata.exposure}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        );
+      }
     }
 
     useEffect(() => {

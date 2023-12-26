@@ -1,5 +1,6 @@
 import './App.css';
 import React, { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import Gallery from './components/Gallery.jsx'
 import About from './components/About.jsx'
 import Projects from './components/Projects.jsx'
@@ -35,7 +36,8 @@ let windowRef = useRef(null);
     show_new_text(project);
   }
 
-  const [content, setContent] = useState(<Main to_projects={handle_projects_selector}/>);
+  //const [content, setContent] = useState(<Main to_projects={handle_projects_selector}/>);
+  const [content, setContent] = useState(0);
   let [select_i, setSelect] = useState(0);
   let [timer, setTimer] = useState();
   
@@ -50,9 +52,21 @@ let windowRef = useRef(null);
     <Other/>
   ];
 
-
+  const location = useLocation();
+  //const currentPath = location.pathname.substring('/portfolio'.length);
+  const currentPath = location.pathname.replace(/^\/portfolio/, '');
+  
   useEffect(() => {
-    show_new_text(0);
+    console.log(currentPath);
+    switch (currentPath) {
+      case "/about": show_new_text(1); break;
+      case "/projects": show_new_text(3); break;
+      case "/gallery": show_new_text(4); break;
+      case "/printing": show_new_text(5); break;
+      case "/programming": show_new_text(6); break;
+      case "/other": show_new_text(7); break;
+      default: show_new_text(0); break;
+    }
 
     function handleScroll() {
       if (window.scrollY > 0) {
@@ -71,9 +85,6 @@ let windowRef = useRef(null);
 
   const show_new_text = (new_text_selection) => {
     let select = new_text_selection;
-    if(window.innerWidth < 1024){
-      select = 2;
-    }
     text_select = select;
     setText_select(text_select);
     select_i = select;
@@ -145,7 +156,7 @@ let windowRef = useRef(null);
         title = title.slice(0, -1);
         setTitle(title);
       } else{clearInterval(timeVar); add_letters();}
-    }, 125); 
+    }, 50); 
     setTimer(timeVar);
   }
 
@@ -163,7 +174,7 @@ let windowRef = useRef(null);
         let offset = titleRef.current.offsetWidth/2;
         wrapperRef.current.style.width = "calc(50vw + " + String(offset) + "px)";
     }
-    }, 125);
+    }, 75);
     setTimer(timerVar);
   }
     /*

@@ -22,7 +22,7 @@ function About() {
         </div>
 
         <div className='flex'>
-          SAILING FROM: &nbsp;<div className='du typewritten'>Student</div> 
+          SAILING FROM: &nbsp;<div className='du typewritten'>Student life</div> 
           TO: &nbsp;<div className='du typewritten'> Homelessness</div>
         </div>
 
@@ -33,14 +33,14 @@ function About() {
         </div>
 
         <div className='flex'>
-          AGE: &nbsp;<div className='du typewritten'>20</div> 
-          BIRTHDATE: &nbsp; <div className='du typewritten'>19.11.2002</div> 
-          PRONOUNS: &nbsp; <div className='du typewritten'> She/They</div>
+          AGE: &nbsp;<div className='du typewritten'>21</div> 
+          BIRTHDAY: &nbsp; <div className='du typewritten'>19.11.2002</div> 
+          PRONOUNS: &nbsp; <div className='du typewritten'> She/They/It</div>
         </div>
 
         <div className='flex'>
-          STUDYING: &nbsp; <div className='du typewritten'> English & (Biology) </div>
-          SEMESTER: &nbsp; <div className='du typewritten'> 2nd </div>
+          STUDYING: &nbsp; <div className='du typewritten'> English & PolSci </div>
+          SEMESTER: &nbsp; <div className='du typewritten'> 3rd </div>
         </div>
 
         <div className='separator' />
@@ -59,10 +59,11 @@ function About() {
         </div> <div className='flex du typewritten'>
           also back end but enjoys the design aspect of front end development. 
         </div> <div className='flex du typewritten'>
-          Ana e-girl support in Overwatch. As a friend of Blahaj, Lucy is also trans!
+          Ex Ana support in Overwatch. As a friend of Blahaj, Lucy is also trans!
         </div> <div className='flex du typewritten'>
           Favourite TV-Show: The Owl House &nbsp;
           <img style={{ width: "28px" }} src={glyph} alt='Glyph'/>
+           Honourable mention: Arcane
         </div>
         
         <div className='separator' />
