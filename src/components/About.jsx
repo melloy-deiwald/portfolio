@@ -63,7 +63,7 @@ function About() {
         </div> <div className='flex du typewritten'>
           Favourite TV-Show: The Owl House &nbsp;
           <img style={{ width: "28px" }} src={glyph} alt='Glyph'/>
-           Honourable mention: Arcane
+           Honourable mentions: Arcane & Sense8
         </div>
         
         <div className='separator' />
