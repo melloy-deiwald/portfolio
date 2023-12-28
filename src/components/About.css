@@ -19,6 +19,20 @@
     font-weight: 400;
 }
 
+@media only screen and (max-width: 768px) {
+    .about_text{
+        display: none;
+    }
+    .abt::before{
+        content: "Screen too small to view. Please use a device with a larger screen!";
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+        padding: 15px;
+        color: black;
+    }
+}
+
 .about_text *{
     margin-block: 6px;
 }

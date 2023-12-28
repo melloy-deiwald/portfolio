@@ -8,6 +8,7 @@
 body {
   background-image: url('./background.jpg');
   color: hsl(0, 0%, 15%);
+  overflow-x: hidden;
 }
 
 
@@ -74,6 +75,19 @@ nav{
   justify-content: right;
   letter-spacing: 0.5rem;
   width: max-content;
+  min-height: 76.8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+
+  .title > div {
+    white-space: normal;
+    overflow: hidden;
+  }
 }
 
 #nav_left{
@@ -107,6 +121,13 @@ nav{
   padding: 10px;
   padding-inline: 35px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav_link {
+    font-size: 1.25rem;
+    padding-inline: 16px;
+  }
 }
 
 #button_container{

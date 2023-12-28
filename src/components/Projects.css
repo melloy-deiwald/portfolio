@@ -12,6 +12,21 @@
     width: 100%;
 }
 
+
+@media only screen and (max-width: 768px) {
+    .projects{
+        display: none;
+    }
+    .projects_container::before{
+        content: "Screen too small to view. Please use a device with a larger screen!";
+        font-size: 1.5rem;
+        display: block;
+        text-align: center;
+        padding: 15px;
+        color: black;
+    }
+}
+
 .project_text_container{
     display: flex;
     flex-direction: column;
@@ -19,6 +34,7 @@
     padding-right: 8px;
     border-right: dotted 2px black;
 }
+
 
 .project{
     width: 100%;
