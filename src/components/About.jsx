@@ -1,6 +1,4 @@
 import './About.css'
-import React, {useEffect, useRef, useState} from 'react';
-import { ReactSVG } from 'react-svg';
 import white_star_line from '../icons/white_star_line.png'
 import glyph from '../icons/light_glyph.png'
 
@@ -33,14 +31,35 @@ function About() {
         </div>
 
         <div className='flex'>
-          AGE: &nbsp;<div className='du typewritten'>21</div> 
+          AGE: &nbsp;<div className='du typewritten'>{(new Date().getFullYear()) - 2002 - (new Date().getMonth() >= 10 && new Date().getDate() >= 19 ? 0 : 1)}
+        </div> 
           BIRTHDAY: &nbsp; <div className='du typewritten'>19.11.2002</div> 
           PRONOUNS: &nbsp; <div className='du typewritten'> She/They/It</div>
         </div>
 
         <div className='flex'>
           STUDYING: &nbsp; <div className='du typewritten'> English & PolSci </div>
-          SEMESTER: &nbsp; <div className='du typewritten'> 3rd </div>
+          SEMESTER: &nbsp; 
+          <div className='du typewritten'> 
+            {(() => {
+              const startDate = new Date('2022-10-01');
+              const currentDate = new Date();
+
+              let count = 0;
+              let currentDateCopy = new Date(startDate);
+
+              while (currentDateCopy <= currentDate) {
+                const month = currentDateCopy.getMonth() + 1; // Months are zero-based
+                const day = currentDateCopy.getDate();
+                if ((month === 4 && day === 1) || (month === 10 && day === 1)) {
+                  count++;
+                }
+                currentDateCopy.setMonth(currentDateCopy.getMonth() + 6);
+              }
+              const suffix = sem => sem % 10 === 1 && sem !== 11 ? 'st' : sem % 10 === 2 && sem !== 12 ? 'nd' : sem % 10 === 3 && sem !== 13 ? 'rd' : 'th';
+              return `${count}${suffix(count)}`;
+            })()}
+          </div>
         </div>
 
         <div className='separator' />
@@ -48,22 +67,33 @@ function About() {
         <div className='flex'>
           PASSENGER FACT:  &nbsp;
           <div className='du typewritten'>
-            Lucy is a huge nerd. She does quite a bit of 3d-printing,
+            To the dork who's reading this, Hi. I'm Lucy, also known
           </div>
         </div>
 
         <div className='flex du typewritten'>
-          loves typewriters, mechanical keyboards fountain pens, synthersizers, d&d. 
+          as Bean, online I go by the handle Melloy. As is obvious from this webpage,
         </div> <div className='flex du typewritten'>
-          She also spends a lot of time doing front end coding, sometimes
+          I'm a pretty big nerd. I mean I play dnd, have my own server, and own a 
         </div> <div className='flex du typewritten'>
-          also back end but enjoys the design aspect of front end development. 
+          3d printer. I love coding, web design, writing instruments, synthesizers, 
         </div> <div className='flex du typewritten'>
-          Ex Ana support in Overwatch. As a friend of Blahaj, Lucy is also trans!
+          and girls! (Yeah, this bitch is fucking gay) I'm also the textbook
         </div> <div className='flex du typewritten'>
-          Favourite TV-Show: The Owl House &nbsp;
-          <img style={{ width: "28px" }} src={glyph} alt='Glyph'/>
-           Honourable mentions: Arcane & Sense8
+          definition of a stereotypical lesbo, well I just have to actually go and
+        </div> <div className='flex du typewritten'>
+          finally pick up skating to complete my personality fr. I study English and
+        </div> <div className='flex du typewritten'>
+          Political science to ... varying degrees of success. My favourite TV-show
+        </div> <div className='flex du typewritten'>
+          is The Owl House &nbsp; <img style={{ width: "28px" }} src={glyph} alt='Glyph'/>
+          , though Arcane and Sense8 do deserve an honourable
+        </div> <div className='flex du typewritten'>
+          mention. As for games, nothing beats Life is Strange Before the Storm
+        </div> <div className='flex du typewritten'>
+          and its soundtrack. Currently trying to figure out what to do with my life
+        </div> <div className='flex du typewritten'>
+          wish me luck, this shit's more difficult than I thought.
         </div>
         
         <div className='separator' />
