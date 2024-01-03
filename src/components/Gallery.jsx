@@ -69,7 +69,6 @@ function Gallery() {
           metadata: imageData[index],
           creationDate: new Date(imageData[index].creation_date),
         }));
-    
         // Sort the combinedData array based on creation date in descending order
         combinedData.sort((a, b) => b.creationDate - a.creationDate);
     
@@ -111,7 +110,7 @@ function Gallery() {
     useEffect(() => {
         // This function will run when the component mounts
         generateImages();
-    }, []); // The empty array ensures that this function only runs on mount
+    }, [generateImages]); // The empty array ensures that this function only runs on mount
 
 
 

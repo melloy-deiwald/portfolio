@@ -3,6 +3,7 @@ import './Main.css'
 import discord from '../icons/discord.png'
 import steam from '../icons/steam.png'
 import riot from '../icons/riot.png'
+import insta from '../icons/insta.png'
 
 function Main( { to_projects } ) {
   return (
@@ -24,6 +25,10 @@ function Main( { to_projects } ) {
         <div className='main_img_container'>
           <img src={riot} alt="riot" />
           Lucy #16523
+        </div>
+        <div className='main_img_container'>
+          <img src={insta} alt="riot" />
+          @lucy_melloy
         </div>
       </div>
 
