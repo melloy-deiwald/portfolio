@@ -168,22 +168,6 @@ nav{
 }
 
 
-.link_button{
-  border-bottom: dotted 2px black;
-  text-align: left;
-  margin-left: 17.5%;
-  width: max-content;
-  margin-top: 16px;
-  font-size: 1.5rem;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
-}
-
-.link_button:hover{
-  color: rgb(163, 8, 8);
-  border-bottom: dotted 2px rgb(163, 8, 8);
-}
-
 .scroll_up{
   position: fixed;
   bottom: 36px;

@@ -8,6 +8,12 @@
     color: var(--dark);
 }
 
+.abt_pfp{
+    width: 256px;
+    height: 420px;
+    margin-bottom: 64px;
+}
+
 .about_text{
     font-size: 1.5rem;
     text-align: left;

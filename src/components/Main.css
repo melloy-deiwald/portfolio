@@ -3,13 +3,6 @@
     font-family: "Special Elite";
 }
 
-.main_title{
-    font-size:  4rem;
-    max-width: 25%;
-    text-align: left;
-    margin-left: 17.5%;
-}
-
 .socials{
     margin-top: 10%;
     display: flex;
@@ -18,11 +11,61 @@
 
 .main_img_container{
     display: flex;
-    margin: 8px;
+    margin: 24px;
     align-items: center;
+    font-size: 125%;
 }
 
 .main_img_container img{
-    max-width: 36px;
+    max-width: 42px;
     margin-right: 8px;
+}
+
+
+.link_button{
+    border-bottom: dotted 2px black;
+    text-align: left;
+    width: max-content;
+    margin-top: 16px;
+    font-size: 1.5rem;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+  
+.link_button:hover{
+    color: rgb(163, 8, 8);
+    border-bottom: dotted 2px rgb(163, 8, 8);
+}
+
+.main_title{
+    font-size:  4rem;
+    max-width: 50%;
+    text-align: left;
+}
+
+.title_container{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.title_left{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pfp{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pfp img{
+    width: 256px;
+    height: 420px;
 }
