@@ -2,7 +2,6 @@ import './Main.css'
 
 import discord from '../icons/discord.png'
 import steam from '../icons/steam.png'
-import riot from '../icons/riot.png'
 import insta from '../icons/insta.png'
 import pfp from '../icons/pfp.png'
 
@@ -19,16 +18,17 @@ function Main( { to_projects } ) {
     "Life is ... strange. Huh, guess they weren't wrong",
     "If your life sucks it means you're still alive",
     "I bite :3",
-    "Reach out anytime; I'll try my best to answer"
+    "Reach out anytime; I'll try my best to answer",
+    "You are enough!"
   ]
-  
+
   return (
     <div className='main'>
 
       <div className='title_container'>
         <div className='title_left'>
           <div className='main_title'>
-          {intro_text[Math.floor(Math.random() * intro_text.length)]}
+            {intro_text[Math.floor(Math.random() * intro_text.length)]}
           </div>
           <div onClick={() => {to_projects(3)}} className='link_button'>See Projects</div>
         </div>
@@ -37,10 +37,6 @@ function Main( { to_projects } ) {
         </div>
       </div>
      
-
-
-
-
       <div className='socials'>
         <div className='main_img_container'>
           <img src={discord} alt="discord" />
@@ -51,18 +47,10 @@ function Main( { to_projects } ) {
           lucy_melloy (id)
         </div>
         <div className='main_img_container'>
-          <img src={riot} alt="riot" />
-          Lucy #16523
-        </div>
-        <div className='main_img_container'>
-          <img src={insta} alt="riot" />
+          <img src={insta} alt="instagram" />
           @lucy_melloy
         </div>
       </div>
-
-
-
-
     </div>
   );
 }

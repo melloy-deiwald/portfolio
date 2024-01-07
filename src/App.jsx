@@ -9,6 +9,8 @@ import Programming from './components/Programming.jsx'
 import Other from './components/Other.jsx'
 import Main from './components/Main.jsx'
 import up from './icons/up.png'
+import Stickers from './components/Stickers.jsx'
+import Mobile_Warning from './components/Mobile_Warning.jsx';
 
 function App() {
 
@@ -60,8 +62,9 @@ function App() {
   /* JSX CONTENT */
   return (
     <div className="App">
+      <Stickers />
       <div className='noise' />
-      
+      <Mobile_Warning />
         <nav>
           <div className="nav_centre">
               <div className="nav_link" id="home" onClick={() => change_content(0)}>

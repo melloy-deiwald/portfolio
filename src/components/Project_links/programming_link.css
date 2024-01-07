@@ -2,6 +2,22 @@
     --pl-border: 1px solid black;
 }
 
+@media only screen and (max-width:768px) {
+    .pl-container{
+        width: 640px !important;
+        gap: 12px !important;
+        padding: 12px;
+    }
+
+    .pc-container{
+        display: none !important;
+    }
+
+    .pl-text-container{
+        flex-direction: column !important;
+    }
+}
+
 .pl-wrapper{
     width: 100%;
     padding: 24px;

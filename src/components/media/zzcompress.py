@@ -8,7 +8,7 @@ def compress_image(input_path, output_path, target_size_kb):
     while True:
         img.save(output_path, quality=quality, optimize=True)
         compressed_size = os.path.getsize(output_path)
-
+        
         if compressed_size <= target_size_kb * 1024:
             break
 
