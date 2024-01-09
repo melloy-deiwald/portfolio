@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useEffect, useRef, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Gallery from './components/Gallery.jsx'
 import About from './components/About.jsx'
 import Projects from './components/Projects.jsx'
@@ -39,6 +39,19 @@ function App() {
     <Programming/>,
     <Other/>
   ];
+
+  const links = [
+    "/",
+    "/about",
+    "/",
+    "/projects",
+    "/photography",
+    "/printing",
+    "/programming",
+    "/other"
+  ];
+
+
   const [content, setContent] = useState(0);
   let [timer, setTimer] = useState();
 
@@ -47,19 +60,27 @@ function App() {
   let wrapperRef = useRef(null);
   let titleRef = useRef(null);
 
+  const navigate = useNavigate();
+
   const location = useLocation();
-  const currentPath = location.pathname.replace(/^\/portfolio/, '').toLowerCase();
+  const initial_path = location.pathname.replace(/^\/portfolio/, '').toLowerCase();
   
-  //END OF DEFINITIONS
+  // END OF DEFINITIONS
 
-  useEffect(() => { //STARTUP
+  // STARTUP
 
+  useEffect(() => { 
+
+    add_navigation_event_listeners();
     add_scroll_button_behaviour();
-    handle_content_change(currentPath);
+    change_content(handle_content_change(initial_path));
 
-    }, []); // END STARTUP
+    }, []); 
 
-  /* JSX CONTENT */
+  // END STARTUP
+
+  // JSX CONTENT
+
   return (
     <div className="App">
       <Stickers />
@@ -109,22 +130,28 @@ function App() {
     </div>
   );
 
+  // END JSX
+
+  // FUNCTIONS
+
   function handle_content_change(path) {
     switch (path) {
-      case "/about": change_content(1); break;
-      case "/projects": change_content(3); break;
-      case "/gallery": change_content(4); break;
-      case "/photography": change_content(4); break;
-      case "/printing": change_content(5); break;
-      case "/programming": change_content(6); break;
-      case "/other": change_content(7); break;
-      default: change_content(0); break;
+      case "/about": return 1;
+      case "/projects": return 3;
+      case "/gallery": return 4;
+      case "/photography": return 4;
+      case "/printing": return 5;
+      case "/programming": return 6;
+      case "/other": return 7;
+      default: return 0;
     }
   }
 
-  function change_content(index) {
+  function change_content(index, doNavigate = true) {
     change_title(index);
     transition_content(index);
+    if (!doNavigate){return}
+    navigate(links[index]);
   }
 
   function transition_content(index) {
@@ -161,7 +188,7 @@ function App() {
         wrapperRef.current.style.transition = "0.33s ease-in";
         let offset = titleRef.current.offsetWidth/2;
         wrapperRef.current.style.width = "calc(50vw + " + String(offset) + "px)";
-    }
+      }
     }, 75);
     setTimer(timerVar);
   }
@@ -185,6 +212,21 @@ function App() {
 
     return () => {
       window.removeEventListener('scroll', handle_show_scroll_button);
+    };
+  }
+
+  function handle_browser_navigation () {
+    let current_path = window.location.pathname.replace("/portfolio", "");
+    change_content(handle_content_change(current_path), false);
+  };
+
+  function add_navigation_event_listeners() {
+    // Add event listener for popstate
+    window.addEventListener('popstate', handle_browser_navigation);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('popstate', handle_browser_navigation);
     };
   }
 
