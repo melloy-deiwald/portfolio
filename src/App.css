@@ -49,13 +49,16 @@
   }
 }
 
-
 body {
-  background-image: url('./background.jpg');
+  background-image: 
+  url('./icons/dot_grid.png'),
+  url('./background.jpg');
+  background-size: 16px 16px, auto;
+  background-blend-mode: soft-light, normal;
   color: hsl(0, 0%, 15%);
   overflow-x: hidden;
+  margin: 0;
 }
-
 
 html{
   scroll-behavior: smooth;

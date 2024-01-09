@@ -43,8 +43,8 @@
     font-size: 200%;
     font-weight: 300;
     text-align: center;
-
 }
+
 .image_description{
     margin-bottom: 10px;
     text-align: center;
@@ -153,6 +153,7 @@
 @media all and (min-width:256px) and (max-width: 1024px) {
     .image_frame{
         width: 90vw;
+        height: 75vh;
         cursor: default;
     }
 

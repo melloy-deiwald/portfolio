@@ -8,6 +8,10 @@
     display: flex;
     justify-content: center;
 }
+.socials a {
+    text-decoration: none;
+    color: rgb(25, 25, 25);
+}
 
 .main_img_container{
     display: flex;

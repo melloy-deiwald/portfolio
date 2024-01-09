@@ -106,7 +106,6 @@ function App() {
           (<img onClick={() => {window.scrollTo(0,0);}} src={up} className='scroll_up' />)
         }
         
-
     </div>
   );
 

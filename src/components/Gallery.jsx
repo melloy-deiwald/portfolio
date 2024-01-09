@@ -16,6 +16,8 @@ function Gallery() {
       "exposure": "1/60",
       "description": "lorem ipsum"
     });
+
+
     let popupRef = useRef(null);
     let greyRef = useRef(null);
 

@@ -18,7 +18,6 @@ function Mobile_Warning () {
       <div className="mobile_warning_info">
         Warning, this website is only meant for Desktop Computers
         proceed at your own risk. The most compatible area is
-        melloy.
         <a href="https://melloy.myftp.org/portfolio/gallery"> the photography section </a>
          which can be viewed on
         mobile.

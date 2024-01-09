@@ -38,18 +38,18 @@ function Main( { to_projects } ) {
       </div>
      
       <div className='socials'>
-        <div className='main_img_container'>
+        <a href='https://discord.com/users/189396786719358978' className='main_img_container'>
           <img src={discord} alt="discord" />
           melloy_
-        </div>
-        <div className='main_img_container'>
+        </a>
+        <a href='https://steamcommunity.com/id/lucy_melloy/' className='main_img_container'>
           <img src={steam} alt="steam" />
           lucy_melloy (id)
-        </div>
-        <div className='main_img_container'>
+        </a>
+        <a href='https://www.instagram.com/lucy_melloy/' className='main_img_container'>
           <img src={insta} alt="instagram" />
           @lucy_melloy
-        </div>
+        </a>
       </div>
     </div>
   );
