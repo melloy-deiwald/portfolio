@@ -49,7 +49,7 @@ function Gallery() {
         popupRef.current.style.transform = "rotate(0deg)";
         greyRef.current.style.background = "rgba(0, 0, 0, 0.35)";
         greyRef.current.style.pointerEvents = "all";
-        greyRef.current.style.cursor = "pointer";
+        greyRef.current.style.cursor = "url('../icons/cursor/cursor_pointer.png'), pointer;";
       }
 
     }
@@ -60,7 +60,7 @@ function Gallery() {
       popupRef.current.style.transform = "rotate(45deg)";
       greyRef.current.style.background = "rgba(0, 0, 0, 0)";
       greyRef.current.style.pointerEvents = "none";
-      greyRef.current.style.cursor = "default";
+      greyRef.current.style.cursor = "url('../icons/cursor/cursor_default.png'), default;";
     }
 
     function generateImages() {

@@ -124,7 +124,7 @@ function App() {
 
         {
           show_scroll &&
-          (<img onClick={() => {window.scrollTo(0,0);}} src={up} className='scroll_up' />)
+          (<img onClick={() => {window.scrollTo(0,0);}} src={up} className='scroll_up'/>)
         }
         
     </div>
@@ -224,7 +224,9 @@ function App() {
     // Add event listener for popstate
     window.addEventListener('popstate', handle_browser_navigation);
 
+
     // Clean up the event listener when the component unmounts
+    
     return () => {
       window.removeEventListener('popstate', handle_browser_navigation);
     };

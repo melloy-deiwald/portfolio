@@ -7,6 +7,10 @@
     gap: 8px;
 }
 
+.Programming_container a {
+    cursor: url('../icons/cursor/cursor_pointer.png'), pointer;
+}
+
 .programming_project_item{
     width: 1024px;
     border: dashed 2px black;

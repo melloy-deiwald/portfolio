@@ -9,6 +9,7 @@
     justify-content: center;
 }
 .socials a {
+    cursor: url('../icons/cursor/cursor_pointer.png'), pointer;
     text-decoration: none;
     color: rgb(25, 25, 25);
 }
@@ -33,7 +34,7 @@
     margin-top: 16px;
     font-size: 1.5rem;
     transition: 0.2s ease-in-out;
-    cursor: pointer;
+    cursor: url('../icons/cursor/cursor_pointer.png'), pointer;
 }
   
 .link_button:hover{

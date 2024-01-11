@@ -4,7 +4,7 @@ import trans_anarchy from '../icons/trans_anarchy.png'
 import trans_flag from '../icons/trans_flag.png'
 import berry from '../icons/berry.png'
 import skate from '../icons/skate.png'
-import Toothless from "./Toothless.jsx";
+import Toothless from "./Toothless.jsx"
 
 function Stickers() {
   return(
