@@ -49,7 +49,6 @@ function Gallery() {
         popupRef.current.style.transform = "rotate(0deg)";
         greyRef.current.style.background = "rgba(0, 0, 0, 0.35)";
         greyRef.current.style.pointerEvents = "all";
-        greyRef.current.style.cursor = "url('../icons/cursor/cursor_pointer.png'), pointer;";
       }
 
     }
@@ -60,7 +59,6 @@ function Gallery() {
       popupRef.current.style.transform = "rotate(45deg)";
       greyRef.current.style.background = "rgba(0, 0, 0, 0)";
       greyRef.current.style.pointerEvents = "none";
-      greyRef.current.style.cursor = "url('../icons/cursor/cursor_default.png'), default;";
     }
 
     function generateImages() {
@@ -77,7 +75,7 @@ function Gallery() {
         // Update the state with the sorted images
         setImages(
           combinedData.map((item) => (
-            <div onClick={() => show_popup(item.image, item.metadata)} className="image_frame">
+            <div onClick={() => show_popup(item.image, item.metadata)} className="image_frame clickable_cursor clicked_cursor">
               <img className="image" src={item.image} alt={item.metadata.name} />
               <div className="image_information">
                 <div className="filler"></div>
@@ -118,9 +116,9 @@ function Gallery() {
 
     return (
       <div className='image_container'>
-        <div onClick={() => close_popup()} ref={greyRef} className='grey_out' />
+        <div onClick={() => close_popup()} ref={greyRef} className='grey_out clickable_cursor clicked_cursor' />
         <div ref={popupRef} className='popup'>
-          <div onClick={() => close_popup()} className='close_popup'>x</div>
+          <div onClick={() => close_popup()} className='close_popup clickable_cursor clicked_cursor'>x</div>
           <img className='image' src={popup_data.link} alt="Image couldn't load" />
           <div className='image_information'>
               <div className='filler'></div>

@@ -4,10 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
-html{
-  cursor: url('./icons/cursor/cursor_default.png'), auto;
-}
-
 @media only screen and (max-width: 768px) {
   .hide_mobile{
     display: none;
@@ -43,9 +39,6 @@ html{
   border: solid 2px rgb(0, 0, 0);
   transition: 0.25s ease-in-out;
 }
-.mobile_warning_button :hover{
-    cursor: url('./icons/cursor/cursor_pointer.png'), pointer;
-}
 
 @media only screen and (min-width:769px) {
   .mobile_warning{
@@ -54,6 +47,7 @@ html{
 }
 
 body {
+  cursor: url('./icons/cursor/cursor_default.png'), auto;
   background-image: 
   url('./icons/dot_grid.png'),
   url('./background.jpg');
@@ -62,6 +56,17 @@ body {
   color: hsl(0, 0%, 15%);
   overflow-x: hidden;
   margin: 0;
+}
+
+body *:active{
+  cursor:url('./icons/cursor/cursor_not_clickable.png'), pointer;
+}
+
+.clickable_cursor:hover{
+  cursor:url('./icons/cursor/cursor_pointer.png'), pointer;
+}
+.clicked_cursor:active{
+  cursor:url('./icons/cursor/cursor_clicked.png'), pointer;
 }
 
 html{
@@ -92,7 +97,6 @@ nav{
   display: flex;
   flex-direction: row;
   user-select: none;
-  cursor: url('./icons/cursor/cursor_pointer.png'), pointer;
 }
 
 #parent{
@@ -172,7 +176,6 @@ nav{
   font-size: 1.75rem;
   padding: 10px;
   padding-inline: 35px;
-  cursor: url('./icons/cursor/cursor_pointer.png'), pointer;
 }
 
 @media only screen and (max-width: 768px) {
@@ -197,7 +200,6 @@ nav{
   font-size: 4rem;
   text-align: center;
   writing-mode: vertical-lr;
-  cursor: url('./icons/cursor/cursor_pointer.png'), pointer;
   user-select: none;
   transition: 0.2s;
   color: var(--black);
@@ -221,7 +223,6 @@ nav{
 
 
 .scroll_up{
-  cursor: url('./icons/cursor/cursor_pointer.png'), pointer;
   position: fixed;
   bottom: 36px;
   right: 64px;

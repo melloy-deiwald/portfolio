@@ -21,7 +21,7 @@ function Punchcard () {
                     return (
                     <div
                         key={colIndex}
-                        className={`punchcard-cell ${isActive ? 'active' : ''}`}
+                        className={`punchcard-cell clickable_cursor clicked_cursor ${isActive ? 'active' : ''}`}
                         onClick={() => handleCellClick(index)}
                     >
                         {colIndex}

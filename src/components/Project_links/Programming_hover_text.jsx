@@ -31,7 +31,7 @@ function Programming_hover_text( {text_value, click_handler , link_index} ) {
     }
 
     return(
-        <div ref={button} onMouseOver={() => button_over()} onClick={() => transition()} className="pl-link">
+        <div ref={button} onMouseOver={() => button_over()} onClick={() => transition()} className="pl-link clickable_cursor clicked_cursor">
             {compile_text}
         </div>
     );

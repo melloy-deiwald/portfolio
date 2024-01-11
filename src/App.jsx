@@ -86,16 +86,16 @@ function App() {
       <Stickers />
       <div className='noise' />
       <Mobile_Warning />
-        <nav>
+        <nav className=''>
           <div className="nav_centre">
               <div className="nav_link" id="home" onClick={() => change_content(0)}>
-                <div className='text_container'>Home</div>
+                <div className='text_container clickable_cursor clicked_cursor'>Home</div>
               </div>
               <div className="nav_link" id="about_me" onClick={() => change_content(1)}>
-                <div className='text_container'>About Me</div>
+                <div className='text_container clickable_cursor clicked_cursor'>About Me</div>
               </div>
               <div className="nav_link" id="projects" onClick={() => change_content(3)}>
-                <div className='text_container'>Projects</div>
+                <div className='text_container clickable_cursor clicked_cursor'>Projects</div>
               </div>
           </div>
         </nav>
@@ -109,7 +109,7 @@ function App() {
         </header>
 
         <div id="button_container">
-          <div id="button" onClick={() => jump_down_button_handler(120)}>
+          <div className='clickable_cursor clicked_cursor' id="button" onClick={() => jump_down_button_handler(120)}>
               =&gt; {/*&gt; is a ">" meaning this is just a =>*/}
           </div>
         </div>
@@ -124,7 +124,7 @@ function App() {
 
         {
           show_scroll &&
-          (<img onClick={() => {window.scrollTo(0,0);}} src={up} className='scroll_up'/>)
+          (<img onClick={() => {window.scrollTo(0,0);}} src={up} className='scroll_up clickable_cursor clicked_cursor'/>)
         }
         
     </div>

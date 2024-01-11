@@ -78,10 +78,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: url('../../icons/cursor/cursor_pointer.png'), pointer;
     user-select: none;
     transition: 0.1s;
-
   }
   
   .punchcard-cell.active {
@@ -93,7 +91,6 @@
 .pcellnumber{
     font-size: 7px;
     margin: 0;
-    cursor: url('../../icons/cursor/cursor_default.png'), default;
     border-top: 1px dashed black ;
 }
 
@@ -122,7 +119,6 @@
 }
 
 .pl-link{
-    cursor: url('../../icons/cursor/cursor_pointer.png'), pointer;
     background: rgb(43, 90, 43);
     color: rgb(230, 230, 230);
     width: max-content;

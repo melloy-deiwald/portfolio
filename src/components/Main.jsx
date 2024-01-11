@@ -30,7 +30,7 @@ function Main( { to_projects } ) {
           <div className='main_title'>
             {intro_text[Math.floor(Math.random() * intro_text.length)]}
           </div>
-          <div onClick={() => {to_projects(3)}} className='link_button'>See Projects</div>
+          <div onClick={() => {to_projects(3)}} className='link_button clickable_cursor clicked_cursor'>See Projects</div>
         </div>
         <div className='pfp'>
           <img src={pfp} alt="" />
@@ -38,15 +38,15 @@ function Main( { to_projects } ) {
       </div>
      
       <div className='socials'>
-        <a href='https://discord.com/users/189396786719358978' className='main_img_container'>
+        <a href='https://discord.com/users/189396786719358978' className='main_img_container clickable_cursor clicked_cursor'>
           <img src={discord} alt="discord" />
           melloy_
         </a>
-        <a href='https://steamcommunity.com/id/lucy_melloy/' className='main_img_container'>
+        <a href='https://steamcommunity.com/id/lucy_melloy/' className='main_img_container clickable_cursor clicked_cursor'>
           <img src={steam} alt="steam" />
           lucy_melloy (id)
         </a>
-        <a href='https://www.instagram.com/lucy_melloy/' className='main_img_container'>
+        <a href='https://www.instagram.com/lucy_melloy/' className='main_img_container clickable_cursor clicked_cursor'>
           <img src={insta} alt="instagram" />
           @lucy_melloy
         </a>

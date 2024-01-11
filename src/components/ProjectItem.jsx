@@ -25,7 +25,7 @@ function ProjectItem ( props ) {
                             {props.description}
                         </div>
                         <div>
-                        <a target='_blank' href={props.url} className='du programming_project_link'>{props.button_text}</a>
+                        <a target='_blank' href={props.url} className='du programming_project_link clickable_cursor clicked_cursor'>{props.button_text}</a>
                         </div>
                     </div>
                     

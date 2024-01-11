@@ -22,8 +22,8 @@ function Photoghraphy_link ({ link, link_index }) {
                         style={{ filter: `blur(${blur}px) brightness(${brightness}) contrast(${contrast}) saturate(${saturation})` }}
                     />
 
-                    <div onClick={() => {link(link_index)}} className='phl-button'></div>
-                    <div onClick={() => {link(link_index)}} className='phl-button-inner'>VIEW</div>
+                    <div onClick={() => {link(link_index)}} className='phl-button clickable_cursor clicked_cursor'></div>
+                    <div onClick={() => {link(link_index)}} className='phl-button-inner clickable_cursor clicked_cursor'>VIEW</div>
 
                 </div>
 

@@ -69,10 +69,10 @@
 
 .prl-bed-svg{
     z-index: 1;
-    cursor: url('../../icons/cursor/cursor_pointer.png'), pointer;
     width: max-content;
     height: max-content;
 }
+
 
 .stroke-animation{
     z-index: 0;

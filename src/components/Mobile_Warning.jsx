@@ -23,7 +23,7 @@ function Mobile_Warning () {
         mobile.
       </div>
 
-      <div onClick={() => document.querySelector('.mobile_warning').style.display = 'none'} className="mobile_warning_button">proceed</div>
+      <div onClick={() => document.querySelector('.mobile_warning').style.display = 'none'} className="mobile_warning_button clickable_cursor clicked_cursor">proceed</div>
     </div>
   );
 } export default Mobile_Warning

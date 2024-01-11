@@ -17,10 +17,6 @@
     padding: 8px;
 }
 
-.print a{
-    cursor: url('../icons/cursor/cursor_pointer.png'), pointer;
-}
-
 .rocket{
     gap: 12px;
 }

@@ -23,7 +23,7 @@ function Rocket ()  {
                         has been in use with us for 3 years now. Fully 3d Printed and held
                         together using super glue, it is absolutely FAA certified! Printed
                         at 75% size &nbsp;
-                        <a target="_blank" href="https://www.thingiverse.com/thing:3272654">See Blueprint!</a>
+                        <a className='clickable_cursor clicked_cursor' target="_blank" href="https://www.thingiverse.com/thing:3272654">See Blueprint!</a>
                         </span>
 
                     </div>

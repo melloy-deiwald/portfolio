@@ -32,7 +32,14 @@
     box-sizing: border-box;
     padding-inline: 48px;
     gap: 36px;
-    cursor: url('../../icons/cursor/cursor_pointer.png'), pointer;
+}
+
+.rc-slider-handle{
+    cursor: url('../../icons/cursor/cursor_pointer.png'), grab !important;
+}
+
+.rc-slider-handle:active{
+    cursor:url('../../icons/cursor/cursor_clicked.png'), grab !important;
 }
 
 .phl-slider-element{
@@ -64,7 +71,6 @@
     border: 2px solid white;
     padding: 4px;
     box-sizing: border-box;
-    cursor: url('../../icons/cursor/cursor_pointer.png'), pointer;
 }
 
 .phl-button-inner{
@@ -78,7 +84,6 @@
     border: 3px solid transparent;
     padding: 4px;
     box-sizing: border-box;
-    cursor: url('../../icons/cursor/cursor_pointer.png'), pointer;
     transition: 0.1s;
 
     display: flex;
@@ -94,5 +99,4 @@
 .phl-slider-desc{
     color: white;
     user-select: none;
-    cursor: default;
 }
